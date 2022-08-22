@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+			integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="./js/script.js" defer></script>
+		<link rel="stylesheet" href="./style/style.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div>
+				<h1>QR Code Generator</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="first">
+				<div class="first-inner">
+					<div>
+						<h1>QR Code Generator</h1>
+					</div>
+					<div>
+						<p class="text">
+							QR Codes allow smartphone users to access your website simply and
+							quickly.
+						</p>
+					</div>
+					<div>
+						<br />
+						<p>
+							Enter your URL below to generate a QR Code and download the image.
+						</p>
+					</div>
+					<div>
+						<form id="form">
+						<input type="text" name="url" id="url" placeholder="Enter url " required />
+					</div>
+					<div>
+						<select name="size" id="size" required>
+							<option value="100">100x100</option>
+							<option value="200">200x200</option>
+							<option value="300" selected="">300x300</option>
+							<option value="400">400x400</option>
+							<option value="500">500x500</option>
+							<option value="600">600x600</option>
+							<option value="700">700x700</option>
+						</select>
+					</div>
+					<div>
+						<button name="Generate QR" type="submit">Generate QR</button>
+                    </form>
+					</div>
+				</div>
+                <div class="first-second-inner">
+                    <div class="qrcode">
+                        <div id="qrcode">
+						</div>
+						<div>
+							<i class="fa fa-spinner fa-spin" style="font-size:50px;" id="spinner"></i>
+						</div>
+                    </div>
+                </div>
+			</div>
+			<div class="second">
+				<img src="./img/qr-code.svg" alt="" />
+			</div>
+		</div>
+	</body>
+</html>
